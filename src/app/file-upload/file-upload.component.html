@@ -1,0 +1,39 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="space-left">App</span>
+  </mat-toolbar>
+  <br>
+  <mat-form-field appearance="fill" class="space-left">
+    <mat-label>Choose Schema</mat-label>
+    <mat-select (selectionChange)="changeSchema($event.value)">
+      <mat-option value="schemaone">Schema 1</mat-option>
+      <mat-option value="schematwo">Schema 2</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="space-left">
+    <mat-label>Choose table</mat-label>
+    <mat-select (selectionChange)="changeTable($event.value)">
+      <mat-option value="tableone">Table 1</mat-option>
+      <mat-option value="tabletwo">Table 2</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+<input type="file" class="file-input"
+       (change)="handleFileInput($event)" #fileUpload>
+
+<div class="file-upload">
+  <mat-label class="space-left ft-20">Choose file:</mat-label>
+    <button mat-mini-fab color="primary" class="upload-btn space-left space-right"
+      (click)="fileUpload.click()">
+        <mat-icon>attach_file</mat-icon>
+    </button>
+    {{fileName || "No file uploaded yet."}}
+</div>
+
+<button mat-raised-button color="primary" class="upload-btn space-left mt-5"
+(click)="uploadFile()">Submit
+</button>
+
+<div class="space-left mt-5 ft-20">{{responseMessage}}</div>
