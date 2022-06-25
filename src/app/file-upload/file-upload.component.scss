@@ -16,3 +16,56 @@
   .mt-5{
       margin-top: 20px;
   }
+.parent {
+    width: 100%;
+   height: 70%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.ft-25{
+    font-size: 28px;
+}
+mat-label{
+    font-size: 18px;
+}
+mat-option{
+    font-size: 18px;
+}
+mat-select{
+    font-size: 18px;
+}
+
+.homeTitle{
+    padding-right: 50px;
+}
+.parent-header{
+    width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.child-header{
+    margin-top: 1em;
+    margin-bottom: 0.2em;
+}
+mat-icon {
+    transform: scale(1.6);
+}
+.file-upload {
+    margin: 1em 0 1em 0;
+}
+
+.upload-btn {
+    margin-left: 13em;
+}
+
+.mat-toolbar.mat-primary {
+    background: #3A5BA0;
+    color: #fff;
+  }
+
+  .mat-button, .mat-raised-button, .mat-mini-fab {
+    background-color:#3A5BA0;
+    color: #fff;
+}
